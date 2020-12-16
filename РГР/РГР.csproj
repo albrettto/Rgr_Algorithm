@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01766520-034A-4564-A9EC-0688B1FA518E}</ProjectGuid>
+    <ProjectGuid>{F45C45CE-23F6-48B6-B1D3-BE3DFB700534}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RGR_Algorithm</RootNamespace>
-    <AssemblyName>RGR_Algorithm</AssemblyName>
+    <RootNamespace>РГР</RootNamespace>
+    <AssemblyName>РГР</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
