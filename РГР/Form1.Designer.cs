@@ -37,27 +37,30 @@
             this.Result_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.Result_Label = new System.Windows.Forms.Label();
             this.Result_Button = new System.Windows.Forms.Button();
-            this.ClearList_Button = new System.Windows.Forms.Button();
+            this.Clear_Button = new System.Windows.Forms.Button();
             this.CountTop_NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CountTop_Label = new System.Windows.Forms.Label();
             this.Alert_Label = new System.Windows.Forms.Label();
             this.AdditInfo_Label = new System.Windows.Forms.Label();
+            this.AdjList_Label = new System.Windows.Forms.Label();
+            this.AdjList_RichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Top_NumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CountTop_NumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // Info_RichTextBox
             // 
-            this.Info_RichTextBox.BackColor = System.Drawing.Color.PaleGreen;
-            this.Info_RichTextBox.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Info_RichTextBox.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.Info_RichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Info_RichTextBox.ForeColor = System.Drawing.Color.MidnightBlue;
             this.Info_RichTextBox.Location = new System.Drawing.Point(13, 13);
             this.Info_RichTextBox.Name = "Info_RichTextBox";
             this.Info_RichTextBox.ReadOnly = true;
             this.Info_RichTextBox.Size = new System.Drawing.Size(429, 90);
             this.Info_RichTextBox.TabIndex = 0;
-            this.Info_RichTextBox.Text = "Хусамов Альберт ПРО-222\nРГР Вариант №17\nЗадание:\nОрграф, заданный с помощью списк" +
-    "ов смежности, проверить на наличие\nциклов и при их наличии вывести каждый цикл в" +
-    " виде вершин циклического пути.";
+            this.Info_RichTextBox.Text = "Хусамов Альберт ПРО-222\nВариант №17\nЗадание:\nОрграф, заданный с помощью списков с" +
+    "межности, проверить на наличие\nциклов и при их наличии вывести каждый цикл в вид" +
+    "е вершин циклического пути.";
             // 
             // Top_NumericUpDown
             // 
@@ -119,12 +122,15 @@
             // 
             // Result_RichTextBox
             // 
+            this.Result_RichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Result_RichTextBox.BackColor = System.Drawing.Color.MintCream;
             this.Result_RichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Result_RichTextBox.ForeColor = System.Drawing.Color.DarkGreen;
-            this.Result_RichTextBox.Location = new System.Drawing.Point(487, 40);
+            this.Result_RichTextBox.Location = new System.Drawing.Point(649, 40);
             this.Result_RichTextBox.Name = "Result_RichTextBox";
-            this.Result_RichTextBox.Size = new System.Drawing.Size(301, 185);
+            this.Result_RichTextBox.Size = new System.Drawing.Size(183, 185);
             this.Result_RichTextBox.TabIndex = 5;
             this.Result_RichTextBox.Text = "";
             // 
@@ -132,7 +138,7 @@
             // 
             this.Result_Label.AutoSize = true;
             this.Result_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Result_Label.Location = new System.Drawing.Point(483, 13);
+            this.Result_Label.Location = new System.Drawing.Point(645, 13);
             this.Result_Label.Name = "Result_Label";
             this.Result_Label.Size = new System.Drawing.Size(108, 24);
             this.Result_Label.TabIndex = 6;
@@ -151,18 +157,18 @@
             this.Result_Button.UseVisualStyleBackColor = false;
             this.Result_Button.Click += new System.EventHandler(this.Result_Button_Click);
             // 
-            // ClearList_Button
+            // Clear_Button
             // 
-            this.ClearList_Button.BackColor = System.Drawing.Color.MistyRose;
-            this.ClearList_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ClearList_Button.ForeColor = System.Drawing.Color.Firebrick;
-            this.ClearList_Button.Location = new System.Drawing.Point(187, 222);
-            this.ClearList_Button.Name = "ClearList_Button";
-            this.ClearList_Button.Size = new System.Drawing.Size(170, 23);
-            this.ClearList_Button.TabIndex = 9;
-            this.ClearList_Button.Text = "Очистить список смежностей";
-            this.ClearList_Button.UseVisualStyleBackColor = false;
-            this.ClearList_Button.Click += new System.EventHandler(this.ClearList_Button_Click);
+            this.Clear_Button.BackColor = System.Drawing.Color.MistyRose;
+            this.Clear_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Clear_Button.ForeColor = System.Drawing.Color.Firebrick;
+            this.Clear_Button.Location = new System.Drawing.Point(187, 222);
+            this.Clear_Button.Name = "Clear_Button";
+            this.Clear_Button.Size = new System.Drawing.Size(170, 23);
+            this.Clear_Button.TabIndex = 9;
+            this.Clear_Button.Text = "Очистить список смежностей";
+            this.Clear_Button.UseVisualStyleBackColor = false;
+            this.Clear_Button.Click += new System.EventHandler(this.Clear_Button_Click);
             // 
             // CountTop_NumericUpDown
             // 
@@ -220,17 +226,42 @@
             this.AdditInfo_Label.TabIndex = 13;
             this.AdditInfo_Label.Text = "(Вершины записывать ч/з пробел. В конце нажать на Enter)";
             // 
+            // AdjList_Label
+            // 
+            this.AdjList_Label.AutoSize = true;
+            this.AdjList_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdjList_Label.Location = new System.Drawing.Point(448, 13);
+            this.AdjList_Label.Name = "AdjList_Label";
+            this.AdjList_Label.Size = new System.Drawing.Size(186, 24);
+            this.AdjList_Label.TabIndex = 14;
+            this.AdjList_Label.Text = "Список смежности:";
+            // 
+            // AdjList_RichTextBox
+            // 
+            this.AdjList_RichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.AdjList_RichTextBox.BackColor = System.Drawing.Color.MintCream;
+            this.AdjList_RichTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdjList_RichTextBox.ForeColor = System.Drawing.Color.DarkGreen;
+            this.AdjList_RichTextBox.Location = new System.Drawing.Point(452, 40);
+            this.AdjList_RichTextBox.Name = "AdjList_RichTextBox";
+            this.AdjList_RichTextBox.Size = new System.Drawing.Size(185, 185);
+            this.AdjList_RichTextBox.TabIndex = 15;
+            this.AdjList_RichTextBox.Text = "";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Honeydew;
-            this.ClientSize = new System.Drawing.Size(814, 281);
+            this.ClientSize = new System.Drawing.Size(844, 281);
+            this.Controls.Add(this.AdjList_RichTextBox);
+            this.Controls.Add(this.AdjList_Label);
             this.Controls.Add(this.AdditInfo_Label);
             this.Controls.Add(this.Alert_Label);
             this.Controls.Add(this.CountTop_Label);
             this.Controls.Add(this.CountTop_NumericUpDown);
-            this.Controls.Add(this.ClearList_Button);
+            this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Result_Button);
             this.Controls.Add(this.Result_Label);
             this.Controls.Add(this.Result_RichTextBox);
@@ -240,6 +271,7 @@
             this.Controls.Add(this.Top_NumericUpDown);
             this.Controls.Add(this.Info_RichTextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(860, 320);
             this.Name = "Main_Form";
             this.Text = "РГР Хусамов Альберт ПРО-222";
             ((System.ComponentModel.ISupportInitialize)(this.Top_NumericUpDown)).EndInit();
@@ -259,11 +291,13 @@
         private System.Windows.Forms.RichTextBox Result_RichTextBox;
         private System.Windows.Forms.Label Result_Label;
         private System.Windows.Forms.Button Result_Button;
-        private System.Windows.Forms.Button ClearList_Button;
+        private System.Windows.Forms.Button Clear_Button;
         private System.Windows.Forms.NumericUpDown CountTop_NumericUpDown;
         private System.Windows.Forms.Label CountTop_Label;
         private System.Windows.Forms.Label Alert_Label;
         private System.Windows.Forms.Label AdditInfo_Label;
+        private System.Windows.Forms.Label AdjList_Label;
+        private System.Windows.Forms.RichTextBox AdjList_RichTextBox;
     }
 }
 
